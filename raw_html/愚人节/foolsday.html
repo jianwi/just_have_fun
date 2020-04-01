@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gifts for you</title>
+</head>
+<body style="position: relative;min-height: 95vh">
+
+    <div hidden id="refuse_me">
+        <h1> Your are really a Fool Guy!</h1>
+        <h2>you'll never know what you had missed，and That will made you regret all the life</h2>
+        <h3>不识趣的家伙。。。</h3>
+    </div>
+
+    <div hidden id="twice_enter">
+        <h1>你不是不听嘛，还点进来干嘛!!!</h1>
+        <h2>
+            以为我不知道？
+        </h2>
+        <h3>太小看我了吧，哼</h3>
+        <h4>
+            Bye Bye!
+        </h4>
+    </div>
+
+    <div style="position: absolute;bottom: 0px;padding: 10px;text-align: center;width: 100%">
+        Designed By <a href="http://jialidun.vip">Jianwi</a>
+    </div>
+    <div hidden id="accept_me" >
+        <div style="text-align: center;background: pink;color: antiquewhite;padding: 50px 10px">
+            <h1>送你一颗大大的红心</h1>
+            <p><svg t="1585745069712" class="icon" viewBox="0 0 1159 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1114" width="200" height="200"><path d="M590.223661 90.966914C378.65076-101.42474 27.357977 25.825628 27.357977 336.711735 27.357977 763.094159 590.223661 1007.54433 590.223661 1007.54433 590.223661 1007.54433 1153.089344 742.005008 1153.089344 336.711735 1153.123414 25.825628 840.022777-96.178004 590.223661 90.966914L590.223661 90.966914Z" p-id="1115" fill="#d81e06"></path></svg></p>
+            <h3>Happy April Fool's Day ：）</h3>
+
+        </div>
+    </div>
+
+    <div id="rubbish_message" hidden>
+        <h1>是你亲口说的，你玩不起。。。</h1>
+        <h2>既然你都承认了，那就放过你啦！！！嘻嘻嘻</h2>
+        <h3>江湖之大，我们有缘在会</h3>
+        <h2>Happy April Fool's Day</h2>
+        <h1>比个小心心 <b style="color: red">❤❤❤</b></h1>
+    </div>
+
+    <script>
+
+        function IsRubbish(element) {
+            alert('快说，你是不是玩不起？')
+            while(!confirm('就问你是不是玩不起？')) {
+                alert('还不承认啊。不承认那我就再问你一次')
+            }
+            alert('真的吗？哈哈哈哈哈哈哈。')
+            document.body.innerHTML = element.innerHTML
+        }
+    </script>
+    <script>
+        if (confirm('告诉你一个小秘密，要不要听？')){
+            if (document.cookie == 'you are really a fool!'){
+                alert('Fool guy ,you are really a fool， you have missed your only chance!!!')
+                twice_enter.hidden = false
+                setTimeout(()=>{
+                    if (confirm('我都等了5秒了，还不走？是要接受我的惩罚吗？')){
+                        IsRubbish(rubbish_message)
+                    }else {
+                        alert('有些人就是玩不起，真的。。。')
+                    }
+                },5000)
+            }else {
+                if (confirm('我喜欢你，嘻嘻嘻。接受我的告白吗？')){
+                    accept_me.hidden = false
+                }else {
+                    IsRubbish(rubbish_message)
+                }
+            }
+        }else {
+            document.cookie='you are really a fool!'
+            refuse_me.hidden = false
+        }
+
+
+    </script>
+</body>
+</html>
