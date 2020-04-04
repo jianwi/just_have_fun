@@ -10,6 +10,9 @@
 
           <router-link class="col-5 btn mx-2 btn-primary" to="">青年大学习截图</router-link>
         </div>
+        <div class="row">
+
+        </div>
       </div>
     </div>
     <div class="card m-1 mt-2 pt-2">

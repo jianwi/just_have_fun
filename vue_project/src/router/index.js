@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Xuexitong from "../views/xuexitong/Index";
 import XuexitongHelp from "../views/xuexitong/Help";
+import Daxuexi from "../views/daxuexijietu/Index";
+import DaxuexiPic from "../views/daxuexijietu/Pic";
 
 Vue.use(VueRouter)
 
@@ -25,6 +27,16 @@ const routes = [
     name: '学习通',
     component: Xuexitong
 
+  },
+  {
+    path: '/daxuexi',
+    name: '大学习',
+    component: Daxuexi
+  },
+  {
+    path: '/daxuexi/:ji/:qi',
+    name: '大学习图片',
+    component: DaxuexiPic
   }
 ]
 
