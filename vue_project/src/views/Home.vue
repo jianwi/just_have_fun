@@ -4,15 +4,9 @@
       <div class="card-header-pills">
         原创区域
       </div>
-      <div class="card-body container">
-        <div class="row">
-          <router-link class="offset-1 col-5 btn btn-primary" to="/xuexitong">学习通倍速播放</router-link>
+      <div class="card-body container text-left">
+          <router-link class="my-1 offset-1 col-4 btn btn-primary" :key="key" :to="original.link" v-for="(original,key) of original_list">{{ original.name }}</router-link>
 
-          <router-link class="col-5 btn mx-2 btn-primary" to="/daxuexi">青年大学习截图</router-link>
-        </div>
-        <div class="row">
-
-        </div>
       </div>
     </div>
     <div class="card m-1 mt-2 pt-2">
@@ -32,6 +26,24 @@
 
 export default {
   name: 'Home',
+  data(){
+    return{
+      original_list: [
+        {
+          name: '学习通倍速播放',
+          link:'/xuexitong'
+        },
+        {
+          name: '青年大学习截图',
+          link: '/daxuexi'
+        },
+        {
+          name: '网页刷新器',
+          link: '/web_refresh'
+        }
+      ]
+    }
+  },
   components: {
   },
   mounted() {
