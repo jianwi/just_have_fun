@@ -26,6 +26,9 @@
 export default {
   name: 'Home',
   components: {
+  },
+  mounted() {
+    this.$store.commit('title',{title:'好玩的小工具站'})
   }
 }
 </script>

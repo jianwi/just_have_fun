@@ -2,7 +2,7 @@
     <nav class="navbar bg-secondary text-light">
         <div class="container align-items-center">
             <div class="navbar-brand">
-                好玩的小工具站
+                {{ title }}
             </div>
         </div>
     </nav>
@@ -10,7 +10,12 @@
 
 <script>
     export default {
-        name: "Header"
+        name: "Header",
+        computed:{
+            title(){
+                return this.$store.state.title
+            }
+        }
     }
 </script>
 
