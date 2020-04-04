@@ -5,7 +5,7 @@ import Xuexitong from "../views/xuexitong/Index";
 import XuexitongHelp from "../views/xuexitong/Help";
 import Daxuexi from "../views/daxuexijietu/Index";
 import DaxuexiPic from "../views/daxuexijietu/Pic";
-
+import WebRefrsh from "../views/web_refresh/Index";
 Vue.use(VueRouter)
 
 const routes = [
@@ -37,6 +37,11 @@ const routes = [
     path: '/daxuexi/:ji/:qi',
     name: '大学习图片',
     component: DaxuexiPic
+  },
+  {
+    path: '/web_refresh',
+    name: '网页刷新器',
+    component: WebRefrsh
   }
 ]
 
