@@ -8,10 +8,11 @@
                             <div class="alert alert-info text-left">
                                 本工具可以生成学习通倍速播放课程的代码。
                                 <br>
-                                防止同学们在听课过程中因为老师讲的太快而跟不上，从而落下学习。。。
+                                防止同学们在听课过程中因为老师讲的太快而跟不上，落下学习。
 
                                 <div>
-                                    如果不会操作，可以<a class="text-primary font-weight-bolder" href="xuexitong/help">查看帮助</a>
+                                    如果不会操作，可以
+                                    <router-link class="text-primary font-weight-bolder" to="xuexitong/help">查看帮助</router-link>
                                 </div>
                             </div>
 
@@ -116,7 +117,5 @@
 </script>
 
 <style scoped>
-.media img{
-    max-width: 100%;
-}
+
 </style>
