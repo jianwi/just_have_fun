@@ -1,8 +1,8 @@
 <template>
     <div>
-        <img :src="img_src">
-        <div class="m-3">
-            正在加载图片，等一哈
+        <img :src="img_src" @error="imgError">
+        <div class="m-3 p-3 bg-info border">
+            {{ message }}
         </div>
     </div>
 </template>
@@ -16,9 +16,16 @@
               qi:'',
               ch: ['',"一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一"],
               q2p: ['',"q","w",'e','r','t','y','u','i','o','p'],
-              img_src: ''
+              img_src: '',
+              message: '正在加载图片，等一哈'
             }
           },
+        methods:{
+            imgError(){
+                this.message = "这个图片没了。不用看了，返回吧"
+                document.querySelector('img').hidden = 1
+            }
+        },
         created() {
             this.ji = this.$route.params.ji
             this.qi = this.$route.params.qi
@@ -36,6 +43,7 @@
         width: 100%;
         top: 0px;
         left: 0px;
+        height: 100vh;
         position: fixed;
         background: #000;
     }

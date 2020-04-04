@@ -8,7 +8,7 @@
         <div class="row">
           <router-link class="offset-1 col-5 btn btn-primary" to="/xuexitong">学习通倍速播放</router-link>
 
-          <router-link class="col-5 btn mx-2 btn-primary" to="">青年大学习截图</router-link>
+          <router-link class="col-5 btn mx-2 btn-primary" to="/daxuexi">青年大学习截图</router-link>
         </div>
         <div class="row">
 
