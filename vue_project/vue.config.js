@@ -1,4 +1,4 @@
 module.exports = {
     publicPath:'./',
-    outputDir: '../havefun'
+    outputDir: '../vue_dist'
 }

@@ -5,7 +5,7 @@
         原创区域
       </div>
       <div class="card-body container text-left">
-          <router-link class="my-1 offset-1 col-4 btn btn-primary" :key="key" :to="original.link" v-for="(original,key) of original_list">{{ original.name }}</router-link>
+          <router-link class="my-1 offset-md-1 col-md-4 btn btn-primary" :key="key" :to="original.link" v-for="(original,key) of original_list">{{ original.name }}</router-link>
 
       </div>
     </div>
@@ -30,11 +30,11 @@ export default {
     return{
       original_list: [
         {
-          name: '学习通倍速播放',
+          name: '学习通倍速播放代码',
           link:'/xuexitong'
         },
         {
-          name: '青年大学习截图',
+          name: '青年大学习截图生成',
           link: '/daxuexi'
         },
         {
