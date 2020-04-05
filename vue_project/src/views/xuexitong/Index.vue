@@ -1,5 +1,11 @@
 <template>
     <div class="container mt-1">
+        <toast
+                :type="toast.type"
+                :message="toast.message"
+                >
+
+        </toast>
         <div class="row">
             <div class="col-lg-3">
                 <div class="form-group">
@@ -54,8 +60,10 @@
 
 <script>
     import clipboard from 'clipboard';
+    import Toast from "../../components/Toast";
     export default {
         name: "Index",
+        components: {Toast},
         data(){
             return {
                 code:'',
@@ -97,7 +105,11 @@
                         name: '15倍速',
                         rate: 15
                     }
-                ]
+                ],
+                toast:{
+                    type:'info',
+                    message: '',
+                }
             }
         },
         methods:{
@@ -111,7 +123,17 @@
         mounted() {
 
             this.$store.commit('title',{ title:'学习通倍速播放代码生成器' })
-            new clipboard('.btn-clipboard');
+            let clip = new clipboard('.btn-clipboard');
+            clip.on('success', ()=> {
+                this.$store.commit('toast_hidden',{ hidden:false })
+                this.toast.message = '复制成功 :)'
+                this.toast.type = 'success'
+            });
+
+            clip.on('error', ()=> {
+                this.toast.message = '一键复制失败 :( 手动复制吧'
+                this.toast.type = 'error'
+            });
         }
     }
 </script>
