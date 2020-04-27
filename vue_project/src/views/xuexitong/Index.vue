@@ -50,7 +50,7 @@
                         </textarea>
 
                     </div>
-                    <button v-show="code" class="btn-clipboard btn btn-primary btn-block" data-clipboard-action="copy" data-clipboard-target="#codearea">一键复制</button>
+                    <button ref="clipbtn" v-show="code" class="btn-clipboard btn btn-primary btn-block" data-clipboard-action="copy" data-clipboard-target="#codearea">一键复制</button>
 
                 </div>
             </div>
@@ -114,10 +114,15 @@
         },
         methods:{
           generate(){
-              let code = 'document.querySelector("iframe").contentWindow.document.querySelector("iframe").contentWindow.document.getElementById("video_html5_api").playbackRate=' + this.rate
+              let code = 'var v = document.querySelector("iframe").contentWindow.document.querySelector("iframe").contentWindow.document.getElementById("video_html5_api")'+
+                  ';v.playbackRate=' + this.rate +
+                      ';v.play()'
               let base_code = 'eval(window.atob("' + window.btoa(code) + '"))'
 
               this.code = base_code
+                setTimeout(()=>{
+                    this.$refs.clipbtn.click()
+                },500)
           }
         },
         mounted() {
