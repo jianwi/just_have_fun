@@ -22,7 +22,7 @@ export default {
   },
   watch:{
     text:function (){
-      this.text2 = this.text.replace(/\s+/,' ')
+      this.text2 = this.text.replace(/\s+/g,' ')
     }
   }
 }
