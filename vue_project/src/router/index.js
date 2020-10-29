@@ -6,6 +6,8 @@ import XuexitongHelp from "../views/xuexitong/Help";
 import Daxuexi from "../views/daxuexijietu/Index";
 import DaxuexiPic from "../views/daxuexijietu/Pic";
 import WebRefrsh from "../views/web_refresh/Index";
+import TripBlank from "../views/trip_blank/Index"
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -42,6 +44,10 @@ const routes = [
     path: '/web_refresh',
     name: '网页刷新器',
     component: WebRefrsh
+  },
+  {
+    path: '/trip_blank',
+    component: TripBlank
   }
 ]
 

@@ -6,7 +6,6 @@
       </div>
       <div class="card-body container text-left">
           <router-link class="my-1 offset-md-1 col-md-4 btn btn-primary" :key="key" :to="original.link" v-for="(original,key) of original_list">{{ original.name }}</router-link>
-
       </div>
     </div>
     <div class="card m-1 mt-2 pt-2">
@@ -34,12 +33,20 @@ export default {
           link:'/xuexitong'
         },
         {
-          name: '青年大学习截图生成',
+          name: '大学习壁纸（1）',
           link: '/daxuexi'
+        },
+        {
+          name: '大学习壁纸（2）',
+          link: '/daxuexi2'
         },
         {
           name: '网页刷新器',
           link: '/web_refresh'
+        },
+        {
+          name: '换行转空格',
+          link: '/trip_blank'
         }
       ]
     }

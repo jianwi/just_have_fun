@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img :src="img_src" @error="imgError">
+        <img :src="img_src" @error="imgError" alt="大学习图片"/>
         <div class="m-3 p-3 bg-info border">
             {{ message }}
         </div>
@@ -23,7 +23,7 @@
         methods:{
             imgError(){
                 this.message = "这个图片没了。不用看了，返回吧"
-                document.querySelector('img').hidden = 1
+                document.querySelector('img').hidden = true
             }
         },
         created() {
@@ -41,8 +41,8 @@
 <style scoped>
     img{
         width: 100%;
-        top: 0px;
-        left: 0px;
+        top: 0;
+        left: 0;
         height: 100vh;
         position: fixed;
         background: #000;
